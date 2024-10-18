@@ -1,6 +1,8 @@
 h1 {
     display: none;
-    
+}
+
+p{
     font-size: xx-large; 
     font-weight: 900;
     color: rgb(15, 12, 12); 
@@ -8,5 +10,14 @@ h1 {
     padding:20px;
     border-radius: 20px;
     background-color: rgb(253, 246, 246);
-    
 }
+
+    div#box {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        border: 3px solid black;
+        border-radius: 20px;
+        position: absolute;
+    }
+    
