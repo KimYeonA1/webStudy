@@ -47,3 +47,5 @@ _testmain.go
 #*.jpeg
 #*.psd
 
+#이미지 폴터
+media/
