@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            
+            line-height: 25px;
+            }
+    </style>
+</head>
+<body>
+    <div>
+        <p><b>회원 기본 정보</b></p>
+        <label for="id">아이디:</label>
+        <input type="id" name="id" id="id"> 4~12자의 영문 대소문자와 숫자로만 입력<br>
+        <label for="password">비밀번호:</label>
+        <input type="password" name="password" id="password"> 4~12자의 영문 대소문자와 숫자로만 입력<br>
+        <label for="passwordch">비밀번호 확인:</label>
+        <input type="passwordch" name="passwordch" id="passwordch"><br>
+        <label for="mail">메일주소:</label>
+        <input type="mail" name="mail" id="mail"> ex)sammy@gamil.com<br>
+        <label for="name">이름:</label>
+        <input type="name" name="name" id="name"><br>
+    </div>
+    <div>
+        <p><b>개인 신상 정보</b></p>
+        <label for="SSN">주민등록번호:</label>
+        <input type="SSN" name="SSN" id="SSN">-<input type="SSN" name="SSN" id="SSN"> ex)123456-1234567<br>
+        <label for="birth">생일:</label>
+        <input type="year" name="year" id="year">년<input type="month" name="month" id="month">월<input type="day" name="day" id="day">일<br>
+
+        <input type="radio" name="fild" id="fild1">
+        <label for="fild1">Java</label><br>
+        <input type="radio" name="fild" id="fild1">
+        <label for="wep1">Android</label><br>
+        <input type="radio" name="fild" id="fild1">
+        <label for="wep1">PHP</label><br>
+        <input type="radio" name="fild" id="fild1">
+        <label for="wep1">Java Script</label><br>
+        <input type="radio" name="fild" id="fild1">
+        <label for="wep1">Python</label>*하나 이상 체크<br>
+
+        <label for="intro">자기소개</label><br>
+        <textarea name="intro" id="intro" cols="30" rows="10"></textarea><br>
+
+        <input type="radio" name="age" id="age1">
+        <label for="age1">만 14세 이상입니다.</label><br>
+        <input type="radio" name="age" id="age1">
+        <label for="age1">이용약관 동의 <a href="https://www.HTML.co.kr" target="target_frame">내용보기</a></label><br>
+        <input type="radio" name="age" id="age1">
+        <label for="age1">개인정보 수집 및 이용 동의<a href="https://www.HTML.co.kr" target="target_frame">내용보기</a></label><br>
+    </div>
+
+    <button type="submit">회원 가입</button>
+    <button type="reset">다시 입력</button>
+</body>
+</html>

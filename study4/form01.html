@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/de7b35df6f.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 8px;
+            padding: 0;
+        }
+        a{
+            text-decoration: none;
+        }
+        body{
+            font-family:sans-serif;
+            font-size: larger
+        }
+        nav{
+            background-color: rgb(248, 243, 243);
+            color: aliceblue;
+            height: 80px;
+            width: 80;
+            margin: 0 auto;
+            padding: 8px;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+        div.logo{
+            font-family: 'Times New Roman', Times, serif;
+            width: 200px;
+            font-size: 150%;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+        ul.menu{
+            width: 55%;
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        ul.icons {
+            font-size: 150%;
+            width: 12%;
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            margin-right: 80 auto;
+        }
+        ul.icons li{
+            margin-right: 15px;
+        }
+      
+        ul.menu li a:hover{
+            
+            background-color: #dfd1e9;
+            color: black;
+            border-radius: 20%;
+        }
+        ul.icons li a:hover{
+            color: black;
+        }
+
+        
+    </style>
+
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="#"><i class="fa-brands fa-apple"></i></a>
+            <a href="#">Apple</a>
+        </div>
+    
+        <ul class="menu">
+            <li><a href="#">스토어</a></li>
+            <li><a href="#">Mac</a></li>
+            <li><a href="#">iPad</a></li>
+            <li><a href="#">iPone</a></li>
+            <li><a href="#">Watch</a></li>
+            <li><a href="#">AirPod</a></li>
+        </ul>
+    
+        <ul class="icons">
+            <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+            <li><a href="#"><i class="fa-solid fa-bag-shopping"></i></a></li>
+        </ul>
+    </nav>
+
+</body>
+</html>
