@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function showDetail(){
+        document.querySelector('#desc').style.display = "block";
+        document.querySelector('#open').style.display = "none";
+        }
+        function hideDetail(){
+        document.querySelector('#desc').style.display = "none";
+        document.querySelector('#open').style.display = "block";
+        }
+        </script>
+        <img src="./media/camera-7903435_640.jpg" alt=""><br>
+        <button class="over" id="open" onclick="showDetail()">상세 설명 보기</button>
+        <div id="desc" class="detail">
+            <h4>등심붓꽃</h4>
+            <p>북아메리카 원산으로 .... 번식한다.</p>
+            <button id="close" onclick="hideDetail()">상세 설명 닫기</button>
+        </div>
+</body>
+</html>
