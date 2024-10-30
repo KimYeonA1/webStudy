@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head> 
+<body>
+    <form action="#" method="get" name="myform">
+        <input type="checkbox" name="food" id="food1" value="1500"> 
+        <label for="food1">추가채소 1500원</label><br>
+        <input type="checkbox" name="food" id="food2" value="1000"> 
+        <label for="food2">추가음료 1000원</label><br>
+        <input type="checkbox" name="food" id="food3" value="500"> 
+        <label for="food3">추가피클 500원</label><br>
+        <button type="button">add</button>
+    </form>
+    <hr>
+    <p class="result">추가금액: 0원</p>
+
+    <script>
+        //객체찾기
+        const btn = document.querySelector('[type="button"]');
+        const foodArray = document.myform.food;  
+        const pobj = document.querySelector("p.result");
+
+        //이벤트 리스너 등록(onclick)
+        // foodArray[0].addEventListener("click", check);   1
+        // foodArray[1].addEventListener("click", check);
+        // foodArray[2].addEventListener("click", check);
+
+        // foodArray.forEach((obj)=>{                       2
+        //     obj.addEventListener("click", check);
+        // });
+        // btn.addEventListener("click",check);
+
+        foodArray.forEach(obj=>obj.addEventListener("click", btncheck));
+
+        btn.addEventListener("click",check);
+
+        //이벤트 핸들러 함수(이름있는 선언 함수)
+        function check(){
+            let sum = 0;
+            foodArray.forEach((obj, i) => {
+                if (obj.checked === true) {
+                    sum += parseInt(obj.value); 
+                }
+            });
+            
+            pobj.textContent = `추가금액: ${sum}원`;
+            if(sum === 0){
+                alert("한 개 이상 체크하셔야 됩니다.");
+                return;
+            }else{
+                alert("서버로 데이터를 전송합니다.");
+            }
+        }
+    </script>
+</body>
+</html>
