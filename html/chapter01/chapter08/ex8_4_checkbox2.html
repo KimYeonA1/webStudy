@@ -13,7 +13,7 @@
         <label for="food2">추가음료 1000원</label><br>
         <input type="checkbox" name="food" id="food3" value="500"> 
         <label for="food3">추가피클 500원</label><br>
-        <button type="button">add</button>
+        <button type="submit">add</button>
     </form>
     <hr>
     <p class="result">추가금액: 0원</p>
@@ -34,7 +34,7 @@
         // });
         // btn.addEventListener("click",check);
 
-        foodArray.forEach(obj=>obj.addEventListener("click", btncheck));
+        foodArray.forEach(obj=>obj.addEventListener("click", check));
 
         btn.addEventListener("click",check);
 
