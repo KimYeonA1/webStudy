@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/index.js"></script>
+    <script src="https://kit.fontawesome.com/de7b35df6f.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        nav{
+            height: 100px;
+            border: 1px dotted white;
+            box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+            background-color: rgb(192, 210, 188);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding: 30px;
+        }
+        nav a{
+            text-decoration: none;
+            font-size: x-large;
+            color: rgb(15, 76, 15);
+            
+        }
+        ul.menu{
+            color: rgb(131, 159, 135);
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+        }
+        ul button{
+          
+            background-color: rgb(192, 210, 188);
+            color: rgb(131, 159, 135);
+            border: 0.5px solid rgb(124, 158, 124);
+            border-radius: 3px;
+        }
+        ul button:hover{
+            background-color: rgb(192, 210, 188);
+            color:  rgba(15, 76, 15, 0.5);
+            border: 0.5px solid rgb(15, 76, 15);
+            border-radius: 5px;
+        }
+        .box1{
+            margin-top: -50px;
+            border: 0.5px solid white;
+            width: 300px;
+            padding: 55px;
+            
+
+
+        }
+        ul.menu2{
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+            padding: 20px;
+            width: 188px;
+            background-color: rgb(240, 240, 240);
+            font-size: small;
+        }
+        .guck{
+            color: green;
+        }
+        .container{
+            display: flex;
+            margin: 0 auto;
+            padding: 100px;
+            justify-content: center;
+        }
+       .good1{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px
+        }
+        .good{
+        color: green;
+        }
+        .label1{
+        margin-bottom: -25px;
+        }
+        .label2{
+        display: flex;
+        justify-content: end;
+        margin-bottom: 20px;
+        
+        }
+        .logo{
+        display: flex;
+        align-items: center;
+        }
+     
+        ul.number{
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0;
+        margin-top: 20px;
+        }
+        .borad table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: white;
+        }
+
+        .borad th, .borad td {
+        padding: 5px;
+        text-align: left;
+        border-bottom: 1px solid rgb(254, 249, 249);
+        }
+        .borad td{
+        font-weight: 70;
+        color: rgb(49, 47, 47);
+        }
+
+        .borad th {
+        background-color: rgb(246, 243, 243);
+        color: rgb(15, 76, 15);
+        }
+       
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+
+            <a href="#"><i class="fa-solid fa-circle-notch"></i></a>
+            <a href="#">몽글</a>
+        </div>
+        <ul class="menu">
+            <li>MENU1&emsp;</li>
+            <li>MENU2&emsp;</li>
+            <li>MENU3&emsp;</li>
+            <li>MENU4&emsp;</li>
+            <button type="button" id="SINGN">SIGN UP</button>
+        </ul>
+    </nav>
+
+
+
+
+    <section>
+        <div onload="carousel();">
+            <div class="slideshow">
+                <div class="slideshow_slides">
+                    <a href="#"><img src="./img/slide-1.jpg" alt=""></a>
+                    <a href="#"><img src="./img/slide-2.jpg" alt=""></a>
+                    <a href="#"><img src="./img/slide-3.jpg" alt=""></a>
+                    <a href="#"><img src="./img/slide-4.jpg" alt=""></a>
+                </div>
+                <div class="slideshow_nav">
+                    <a href="#" class="prev"><i class="fa-solid fa-circle-chevron-left"></i></a>
+                    <a href="#" class="next"><i class="fa-solid fa-circle-chevron-right"></i></a>
+                </div>
+                <div class="shlideshow_indicator">
+                    <a href="#" class="active"><i class="fa-solid fa-circle-dot"></i></a>
+                    <a href="#"><i class="fa-solid fa-circle-dot"></i></a>
+                    <a href="#"><i class="fa-solid fa-circle-dot"></i></a>
+                    <a href="#"><i class="fa-solid fa-circle-dot"></i></a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    </section>
+
+    <div class="container">
+        <section>
+            <div class="box1">
+          <h1>국민소통</h1>
+          <hr color="green" size="4px" >
+          <p class ="guck">국민참여</p>
+          <ul class="menu2">
+              <li>이벤트</li>
+            <li>칭찬합시다</li>
+            <li>궁금합니다</li>
+            <li>제안합니다</li>
+            <li>국민신고방(불법산행)</li>
+          </ul>
+          <p>혁신제안</p>
+          <ul class="menu2">
+              <li>기업성장응답센터</li>
+            <li>사회적가치, 혁신 우수사례</li>
+          </ul>
+          <p>클린신고센터</p>
+          <ul class="menu2">
+            <li>공익신고</li>
+            <li>소극행정신고</li>
+            <li>갑질신고</li>
+            <li>청탁금지법 위반신고</li>
+            <li>사이버감사실</li>
+            <li>예산낭비신고</li>
+            <li>갑질행위 공개</li>
+        </ul>
+    </div>
+</section>
+    
+<section class="section2">
+    
+    <div>
+        <div class="good1">
+            <h1 class="good">칭찬합시다</h1>
+            <p><i class="fa-solid fa-house"></i> &emsp;국립공원공단 &emsp; 국민소통 &emsp; 국민참여 &emsp; 칭찬합시다</p>
+        </div>
+        <p>- 본 게시판과 관련이 없거나 상업적인 내용, 특정인이나 특정사안을 비방하는 내용 등은 예고없이 삭제될 수 있습니다.</p><br>
+        
+        <div class="label1">
+            <select name="search" id="search"><option value="search">10개씩</option></select>
+            <button type="button">보기</button>
+        </div>
+        
+        <div class="label2">
+            <select name="search" id="search"><option value="search">제목</option></select>
+            <label for="id"></label>
+            <input type="id" name="id" id="id">
+            <button type="button">검색</button>
+        </div>
+        
+        <hr color="green" size="4px">
+
+        <div class="borad">
+            <table class="list">
+                <thead>
+                    <tr>
+                        <th>번호</th>
+                        <th>공원명</th>
+                        <th>제목</th>
+                        <th>작성자</th>
+                        <th>조회수</th>
+                        <th>등록일</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>5417</td>
+                        <td>북한산</td>
+                        <td>아직 어린 태백산 국립공원을 응원합니다</td>
+                        <td>이금녀</td>
+                        <td>99</td>
+                        <td>2024.12.21</td>
+                    </tr>
+                    <tr>
+                        <td>5417</td>
+                        <td>북한산</td>
+                        <td>아직 어린 태백산 국립공원을 응원합니다</td>
+                        <td>이금녀</td>
+                        <td>99</td>
+                        <td>2024.12.21</td>
+                    </tr>
+                    <tr>
+                        <td>5417</td>
+                        <td>북한산</td>
+                        <td>아직 어린 태백산 국립공원을 응원합니다</td>
+                        <td>이금녀</td>
+                        <td>99</td>
+                        <td>2024.12.21</td>
+                    </tr>
+                    <tr>
+                        <td>5417</td>
+                        <td>북한산</td>
+                        <td>아직 어린 태백산 국립공원을 응원합니다</td>
+                        <td>이금녀</td>
+                        <td>99</td>
+                        <td>2024.12.21</td>
+                    </tr>
+                    <tr>
+                        <td>5417</td>
+                        <td>북한산</td>
+                        <td>아직 어린 태백산 국립공원을 응원합니다</td>
+                        <td>이금녀</td>
+                        <td>99</td>
+                        <td>2024.12.21</td>
+                    </tr>
+                    <tr>
+                        <td>5417</td>
+                        <td>북한산</td>
+                        <td>아직 어린 태백산 국립공원을 응원합니다</td>
+                        <td>이금녀</td>
+                        <td>99</td>
+                        <td>2024.12.21</td>
+                    </tr>
+                    <tr>
+                        <td>5417</td>
+                        <td>북한산</td>
+                        <td>아직 어린 태백산 국립공원을 응원합니다</td>
+                        <td>이금녀</td>
+                        <td>99</td>
+                        <td>2024.12.21</td>
+                    </tr>
+                    <tr>
+                        <td>5417</td>
+                        <td>북한산</td>
+                        <td>아직 어린 태백산 국립공원을 응원합니다</td>
+                        <td>이금녀</td>
+                        <td>99</td>
+                        <td>2024.12.21</td>
+                    </tr>
+                    <tr>
+                        <td>5417</td>
+                        <td>북한산</td>
+                        <td>아직 어린 태백산 국립공원을 응원합니다</td>
+                        <td>이금녀</td>
+                        <td>99</td>
+                        <td>2024.12.21</td>
+                    </tr>
+                    <tr>
+                        <td>5417</td>
+                        <td>북한산</td>
+                        <td>아직 어린 태백산 국립공원을 응원합니다</td>
+                        <td>이금녀</td>
+                        <td>99</td>
+                        <td>2024.12.21</td>
+                    </tr>
+                  
+                </tbody>
+            </table>
+        </div>
+        
+    <ul class="number">
+        <li>1&emsp;</li>
+        <li>2&emsp;</li>
+        <li>3&emsp;</li>
+        <li>4&emsp;</li>
+        <li>5&emsp;</li>
+        <li>6&emsp;</li>
+        <li>7&emsp;</li>
+        <li>8&emsp;</li>
+        <li>9&emsp;</li>
+        <li><i class="fa-solid fa-angle-right"></i>&emsp;</li>
+        <li><i class="fa-solid fa-angles-right"></i>&emsp;</li>
+        <button type="button" id="write">글쓰기</button>
+    </ul>
+    </section>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+        div{
+            width: 200px;
+            height: 200px;
+            border: 1px solid rgb(169, 224, 174);
+            background-color: rgb(169, 224, 174);
+            margin: 0 auto;
+            border-radius: 60px;
+        }
+    </style>
+    <script>
+        function onLoad(){
+            //변수 선언
+            const colorString = "123456789ABCDEFG";
+            let count = 0;      
+            let color = "#";
+            let timerID = null;
+            //객체찾기
+            const divobj = document.querySelector("div");
+            //이벤트처리 setInterval()
+            timerID = setInterval(styleChange,250);  //이름있는 함수, 없는 함수, 화살표 함수 중 사용
+
+            //핸들러 기능
+            function styleChange(){
+                count++;
+                if(count > 50){               //50번만 반복해라
+                    clearInterval(timerID);
+                }
+                //색상값을 랜덤으로 생성
+                for(let i = 0; i<6; i++){
+                    let index = Math.floor(Math.random()*(15-0+1)+0);
+                    let colorValue = colorString[index];
+                    color += colorValue;
+                }
+                //화면객체에 속성 적용
+                divobj.style.backgroundColor = color;
+                divobj.style.borderRadius = `${count}%`;
+                color = "#";
+
+            }
+        }
+    </script>
+</head>
+<body onload="onLoad();">
+    <div></div>
+    
+</body>
+</html>
