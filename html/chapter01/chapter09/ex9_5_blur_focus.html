@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            padding: 10px;
+            font-size: 16px;
+            outline: none;  /*focus 주었을 때 윤곽선이 드러난 것을 방지*/
+            border: 1px solid rgb(169, 183, 207);
+        }
+    </style>
+    <script>
+        function onLoad(){
+            //객체찾기
+            const input = document.querySelector("input");
+            //리스너 등록 및 핸들러 처리
+            input.addEventListener("focus", ()=>{
+                input.style.border="2px dotted red";
+                input.placeholder = "입력하세요";
+               
+            });
+            input.addEventListener("blur", ()=>{
+                input.style.border="1px dotted red";
+                input.placeholder = "클릭하세요";
+            });
+        }
+    </script>
+</head>
+<body onload="onLoad();">
+    <form action="#" method="post"></form>
+    <input type="text" placeholder="클릭하세요">
+</body>
+</html>
