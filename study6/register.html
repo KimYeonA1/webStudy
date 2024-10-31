@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/index.js"></script>
+    <script src="https://kit.fontawesome.com/de7b35df6f.js" crossorigin="anonymous"></script>
+    <style>
+        
+        nav {
+            border: 1px dotted black;
+            background-color: rgb(237, 239, 194);
+            padding: 40px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: x-large;
+        }
+        .logo1 {
+            display: flex;
+            align-items: center;
+        }
+        nav a {
+            text-decoration: none;
+            color: black;
+            margin: 0 10px;
+        }
+        nav a i {
+            margin: 0 5px;
+        }
+        .footer_box {
+            border: 1px dotted black;
+            background-color: rgb(245, 220, 153);
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: x-large;
+        }
+        .all {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+        .nav_box, .miri_box, .aside_box {
+            border: 1px dotted black;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: x-large;
+            min-height: 800px;
+            min-width: 300px;
+        
+           
+        }
+        .nav_box {
+            background-color: rgb(169, 228, 148);
+        }
+        .miri_box {
+            background-color: rgb(169, 228, 148);
+            flex-direction: column;
+            width: 700px;
+        }
+        .miri_box1 {
+            border: 1px dotted black;
+            background-color: rgb(238, 237, 237);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            font-size: medium;
+            margin-top: 20px;
+            width: 600px;
+            height: 700px;
+        }
+        .aside_box {
+            background-color: rgb(169, 228, 148);
+        }
+        .row{
+            flex-direction: row;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo1">
+            <a href="#"><i class="fa-solid fa-camera-retro"></i></a>
+            <a href="#">MIRE PHOTO</a>
+        </div>
+        <div>
+            <a href="#">menu</a>
+            <a href="#">menu</a>
+            <a href="#">menu</a>
+            <a href="#">menu</a>
+        </div>
+        <div>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-solid fa-dove"></i></a>
+        </div>
+    </nav>
+
+    <section>
+        <div onload="carousel();">
+            <div class="slideshow">
+                <div class="slideshow_slides">
+                    <a href="#"><img src="./img/slide-1.jpg" alt=""></a>
+                    <a href="#"><img src="./img/slide-2.jpg" alt=""></a>
+                    <a href="#"><img src="./img/slide-3.jpg" alt=""></a>
+                    <a href="#"><img src="./img/slide-4.jpg" alt=""></a>
+                </div>
+                <div class="slideshow_nav">
+                    <a href="#" class="prev"><i class="fa-solid fa-circle-chevron-left"></i></a>
+                    <a href="#" class="next"><i class="fa-solid fa-circle-chevron-right"></i></a>
+                </div>
+                <div class="shlideshow_indicator">
+                    <a href="#" class="active"><i class="fa-solid fa-circle-dot"></i></a>
+                    <a href="#"><i class="fa-solid fa-circle-dot"></i></a>
+                    <a href="#"><i class="fa-solid fa-circle-dot"></i></a>
+                    <a href="#"><i class="fa-solid fa-circle-dot"></i></a>
+                </div>
+            </div>
+        </div>
+
+
+
+    <div class="all">
+        <section>
+            <div class="nav_box">NAV</div>
+        </section>
+        <section>
+            <div class="miri_box">MIRI PICTURE
+                <div class="miri_box1">
+
+                    <label for="id">아이디</label>
+                    <div class="row">
+                        <input type="id" name="id" id="id">
+                        <select name="search" id="search"><option value="search">&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;@naver.com</option></select>
+                    </div>
+                          
+                    <label for="password">비밀번호</label>
+                    <input type="password" name="password" id="password"><br>
+
+                    <label for="passwordch">비밀번호 재확인</label>
+                    <input type="passwordch" name="passwordch" id="passwordch"><br>
+
+                    <label for="name">이름</label>
+                    <input type="name" name="name" id="name"><br>
+
+                    <label for="birth">생년월일</label>
+                    <div>
+                        <input type="month1" name="month1" id="month1"><select name="search" id="search"><option value="search">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;월</option></select><input type="day" name="day" id="day"><br>
+                    </div>
+
+                    <label for="gender">성별</label>
+                    <select name="search" id="search"><option value="search">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;성별</option></select>
+                    
+                    <label for="mail">본인 확인 이메일(선택)</label>
+                    <input type="mail" name="mail" id="mail"><br>
+
+                    <label for="mail">휴대전화</label>
+                    <select name="search" id="search"><option value="search">&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;대한민국+82</option></select>
+                    <div class="row">
+                        <input type="mail" name="mail" id="mail" ><button type="button">인증번호 받기</button><br>
+                        <input type="number" name="number" id="number" ><br>
+                    </div>
+
+                    <button type="button" >가입하기</button>
+    
+                </div>
+        </div>
+            
+        </section>
+        <section>
+            <div class="aside_box">ASIDE</div>
+        </section>
+    </div>
+    <footer>
+        <div class="footer_box">FOOTER</div>
+    </footer>
+</body>
+</html>
