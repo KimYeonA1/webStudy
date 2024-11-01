@@ -22,19 +22,20 @@
                 id.nextSibling.textContent = "아이디가 맞지 않습니다";
                 id.value = ""; //아이디가 맞지 않으면 다 지워버리는 기능
                 id.focus();
+                return;
             }else{
                 id.nextSibling.textContent = "성공";
                 
             }
-            
             if(pwd.value !== chkPWD){
                 pwd.nextSibling.textContent = "패쓰워드가 맞지 않습니다";
                 pwd.value = ""; //아이디가 맞지 않으면 다 지워버리는 기능
                 pwd.focus();
+                return;
             }else{
-
                 pwd.nextSibling.textContent = "성공";
             }
+            myform.submit();  //서버에 데이터를 전송하고 폼에 있는 데이터는 reset 한다
             
 
             });
