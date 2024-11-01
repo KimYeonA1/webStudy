@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.addEventListener("beforeunload", (e)=>{   //창이 죽기 전에 발표 시켜라
+            const message = `페이지를 이동하시면 현재 페이지는 모두 삭제됩니다.`
+            e.returnValue = message
+            return message;
+        }); 
+    </script>
+</head>
+<body>
+    <h1>페이지를 이동하면 경고창이 나옵니다.</h1>
+    <a href="#" target="_blank">이동</a>
+</body>
+</html>
