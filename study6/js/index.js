@@ -6,6 +6,7 @@ function carousel(){
     let prev = document.querySelector(".prev");
     let next = document.querySelector(".next");
     let indicatorArray = document.querySelectorAll(".shlideshow_indicator a");
+ 
     //현재이미지 인덱스, 인터벌아이디, 슬라이드갯수
     let currentIndex = 0; 
     let timerID = null; 
@@ -16,6 +17,7 @@ function carousel(){
      let newLeft = `${i*100}%`;
      slidesArray[i].style.left = newLeft; 
     }
+ 
     //화면전환해주는 함수
     function gotoslide(index){
      currentIndex = index;
@@ -28,7 +30,9 @@ function carousel(){
      }
      indicatorArray[index].classList.add('active');
     } //end of gotoslide
+ 
     gotoslide(1);
+ 
     //3초마다 gotoslide() 불러주자. 
     //불러주되, index 0,1,2,3,0,1,..
     function startTimer(){
@@ -39,6 +43,7 @@ function carousel(){
      }, 3000); 
     }
     startTimer(); 
+ 
     //이벤트등록 핸들러기능
     slideshow_slides.addEventListener("mouseenter", (event)=>{
      clearInterval(timerID);
@@ -54,12 +59,14 @@ function carousel(){
     prev.addEventListener("mouseleave", (event)=>{
      startTimer();
     });
+ 
     next.addEventListener("mouseenter", (event)=>{
      clearInterval(timerID);
     });
     next.addEventListener("mouseleave", (event)=>{
      startTimer();
     });
+ 
     prev.addEventListener("click", (event)=>{
          event.preventDefault();  //anchor tag 가지고 있는 페이지이동 기본기능을 막아라
          currentIndex = currentIndex - 1; 
@@ -77,17 +84,21 @@ function carousel(){
          }
          gotoslide(currentIndex);
     });
+ 
     //indicator 클릭하면 해당된 페이지로 이동한다.
  //    for(let i=0;i<slideCount;i++){
  //     indicatorArray[i].addEventListener("mouseenter",(event)=>{
  //         clearInterval(timerID);
  //     });
  //    }    
+ 
     indicatorArray.forEach((obj)=>{
      obj.addEventListener("mouseenter",(event)=>{
          clearInterval(timerID);
      });
     });
+ 
+ 
  //    for(let i=0;i<slideCount;i++){
  //     indicatorArray[i].addEventListener("mouseleave",(event)=>{
  //         startTimer(); 
@@ -99,6 +110,7 @@ function carousel(){
          startTimer();
      });
     });
+ 
  //    for(let i=0;i<slideCount;i++){
  //     indicatorArray[i].addEventListener("click",(event)=>{
  //         event.preventDefault();
@@ -112,5 +124,7 @@ function carousel(){
          gotoslide(index);
      });
     });
+ 
+ 
     
  }//end of carousel
