@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            background-color: rgba(244, 243, 243, 0.697);
+            border: 2px solid rgba(177, 173, 173, 0.8);
+            padding: 100px 40px;
+            padding-bottom: 150px;
+            padding-right: -100px;
+            width: 430px;
+            height: 500px;
+            font-size: large;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    
+        sub{
+            color: rgb(180, 176, 176);
+            font-weight: 200;
+        }
+        .push{
+            border: 1px solid rgb(121, 165, 112);
+            text-align: center;
+            background-color: rgb(177, 203, 138);
+            color: rgb(3, 67, 3);
+            padding: 10px 10px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+      
+    </style>
+</head>
+<body>
+    <table>
+        <div class="box">
+               <label for="id">아이디&emsp;&emsp;&emsp;</label>
+                <input type="text" name="id"><br>
+                 
+                <label for="pwd">패스워드&emsp;&emsp;</label>
+                <input type="password" name="pwd"><br>
+                <sub class="sup">영문자 대/소문자 특수문자, 숫자 포함 등 8~32자</sub><br>
+       
+                <label for="pwd">패스워드 확인</label>
+                <input type="password" name="pwd"><br>
+        
+                <label for="mail">이메일</label>
+                <input type="email" name="mail">@<input type="email" name="mail"><br>
+        
+                <label for="address">주소&emsp;&emsp;&emsp;&ensp;</label>
+                <input type="text" name="address"><br>&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;
+                <input type="text" name="address"><br>
+             
+                <a href="#" class="push">가입</a>
+        </div>
+    </table>
+</body>
+</html>

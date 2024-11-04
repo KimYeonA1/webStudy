@@ -1,0 +1,9 @@
+#div-main{
+    width: 100%;
+    margin: 0 auto;
+}
+input[type=text],[type=password],[type=email],[type=tel],[type=date],[type=address]{
+    background-color: whitesmoke;
+    border:1px solid LightGrey;
+    height: 20px;
+  }
